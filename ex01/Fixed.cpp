@@ -12,6 +12,7 @@
 
 #include <iostream>
 #include "Fixed.h"
+#include <cmath>
 
 const int Fixed::frac = 8;
 
@@ -19,15 +20,18 @@ Fixed::Fixed() : fixed(0) {
 	std::cout<<"Default constructor called\n";
 }
 
-Fixed::Fixed(const int fix) : fixed(fix){
+Fixed::Fixed(const int fix) {
 	std::cout<<"Int construdtor called\n";
+	fixed = fix << frac;
 }
 
-Fixed::Fixed(const float f) : fixed(f){
+Fixed::Fixed(const float f) {
+	fixed = (int)roundf(f * (1<<frac));
 	std::cout<<"Float constructor called\n";
 }
 
 Fixed::Fixed(const Fixed &cp) {
+	fixed = cp.fixed;
 	std::cout<<"Copy constructor called\n";
 }
 
@@ -51,18 +55,18 @@ void Fixed::setRawBits(const int raw) {
 }
 
 std::ostream &operator<<(std::ostream &os, const Fixed &fix) {
-	os<<fix.fixed;
+	os<<fix.toFloat();
 	return os;
 }
 
 int Fixed::toInt() const {
 	int ret;
-
+	ret = fixed >> frac;
 	return ret;
 }
 
 float Fixed::toFloat() const {
 	float ret;
-
+	ret = (float)fixed / (1 << frac);
 	return ret;
 }
