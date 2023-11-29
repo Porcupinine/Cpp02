@@ -30,8 +30,31 @@ class Fixed {
 		void setRawBits(const int raw);
 		float toFloat() const;
 		int toInt() const;
+
+		bool operator<(const Fixed& fix) const;
+		bool operator>(const Fixed& fix) const;
+		bool operator<=(const Fixed& fix) const;
+		bool operator>=(const Fixed& fix) const;
+		bool operator==(const Fixed& fix) const;
+		bool operator!=(const Fixed& fix) const;
+
+		Fixed operator+(const Fixed& fix) const;
+		Fixed operator-(const Fixed& fix) const;
+		Fixed operator*(const Fixed& fix) const;
+		Fixed operator/(const Fixed& fix) const;
+
+		Fixed operator++();
+		Fixed operator--();
+		void operator++(int);
+		void operator--(int);
+
+		static const Fixed min(const Fixed& f1, const Fixed& f2);
+		static const Fixed max(const Fixed& f1, const Fixed& f2);
+
+		static Fixed min(const Fixed& f1, const Fixed& f2) ;
+		static Fixed max(const Fixed& f1, const Fixed& f2) ;
+
 };
 std::ostream& operator<<(std::ostream& os, const Fixed& fix);
-
 
 #endif //CPP02_FIXED_H
