@@ -21,6 +21,7 @@ Fixed::Fixed() : fixed(0) {
 
 Fixed::Fixed(const Fixed &cp) {
 	std::cout<<"Copy constructor called\n";
+	fixed = cp.fixed;
 	getRawBits();
 }
 
