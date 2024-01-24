@@ -16,6 +16,10 @@
 
 const int Fixed::frac = 8;
 
+Fixed::Fixed() : fixed(0) {
+//	std::cout<<"Default constructor called\n";
+}
+
 Fixed::Fixed(const int fix) {
 //	std::cout<<"Int construdtor called\n";
 	fixed = fix << frac;
@@ -135,4 +139,8 @@ Fixed Fixed::min(const Fixed &f1, const Fixed &f2) {
 
 Fixed Fixed::max(const Fixed &f1, const Fixed &f2) {
 	return {};
+}
+
+Fixed Fixed::min(Fixed &f1, Fixed &f2) {
+	return Fixed();
 }
