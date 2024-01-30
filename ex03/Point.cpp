@@ -15,17 +15,8 @@
 Point::Point(float x, float y) : m_x(x), m_y(y){
 }
 
-Point::Point(const Point &cp) {
-	m_x = cp.m_x;
-	m_y = cp.m_y;
+Point::Point(const Point &cp) : m_x(cp.m_x), m_y(cp.m_y){
 //	std::cout<<"Point copy contructor called\n";
-}
-
-Point &Point::operator=(const Point &cp) {
-	m_x = cp.m_x;
-	m_y = cp.m_y;
-//	std::cout<<"Point copy operator called\n";
-	return *this;
 }
 
 Fixed Point::getValue(char n) {

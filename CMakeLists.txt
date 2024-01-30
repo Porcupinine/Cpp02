@@ -16,9 +16,5 @@ add_executable(ex03
 		ex03/Fixed.cpp
 		ex03/main.cpp
 		ex03/Point.cpp
-<<<<<<< HEAD
-		ex03/Point.h)
-=======
 		ex03/Point.h
 		ex03/bsp.cpp)
->>>>>>> refs/remotes/origin/master

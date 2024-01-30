@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
@@ -12,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
->>>>>>> refs/remotes/origin/master
 #ifndef CPP02_POINT_H
 #define CPP02_POINT_H
 
@@ -27,7 +24,7 @@ class Point {
 		~Point() = default;
 		Point(float x, float y);
 		Point(const Point& cp);
-		Point& operator=(const Point& cp);
+		Point& operator=(const Point& cp) = delete;
 		Fixed getValue(char n);
 };
 
