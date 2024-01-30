@@ -97,6 +97,7 @@ bool Fixed::operator!=(const Fixed &fix) const {
 
 Fixed Fixed::operator+(const Fixed &fix) const {
 	return Fixed(toFloat() + fix.toFloat());
+
 }
 
 Fixed Fixed::operator-(const Fixed &fix) const {

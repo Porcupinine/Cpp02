@@ -16,10 +16,6 @@
 
 const int Fixed::frac = 8;
 
-Fixed::Fixed() : fixed(0) {
-//	std::cout<<"Default constructor called\n";
-}
-
 Fixed::Fixed(const int fix) {
 //	std::cout<<"Int construdtor called\n";
 	fixed = fix << frac;

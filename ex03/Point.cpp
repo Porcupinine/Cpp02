@@ -1,33 +1,36 @@
-//
-// Created by lpraca-l on 12/15/23.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   Point.cpp                                          :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: laura <laura@student.codam.nl>               +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2023/12/01 10:46:05 by laura         #+#    #+#                 */
+/*   Updated: 2023/12/01 10:46:05 by laura         ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <iostream>
 #include "Point.h"
 
-Point::Point() : x(0), y(0) {
-//	std::cout<<"Point default constructor called\n";
-}
-
-Point::Point(int newX, int newY) : x(newX), y(newY) {
-//	std::cout<<"Point constructor called\n";
-}
-
-Point::~Point() {
-//	std::cout<<"Point destructor called\n";
+Point::Point(float x, float y) : m_x(x), m_y(y){
 }
 
 Point::Point(const Point &cp) {
-	x = cp.x;
-	y = cp.y;
+	m_x = cp.m_x;
+	m_y = cp.m_y;
 //	std::cout<<"Point copy contructor called\n";
 }
 
 Point &Point::operator=(const Point &cp) {
-	x = cp.x;
-	y = cp.y;
+	m_x = cp.m_x;
+	m_y = cp.m_y;
 //	std::cout<<"Point copy operator called\n";
 	return *this;
 }
 
-
+Fixed Point::getValue(char n) {
+	if(n == 'x')
+		return m_x;
+	if(n == 'y')
+		return m_y;
+}

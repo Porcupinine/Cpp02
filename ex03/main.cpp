@@ -14,8 +14,12 @@
 #include "Fixed.h"
 
 int main( void ) {
+<<<<<<< HEAD
 	Fixed a(9);
 	Fixed f(99.9f);
+=======
+	Fixed a;
+>>>>>>> refs/remotes/origin/master
 	float x = 5.05f;
 	int y = 2;
 	Fixed const b( Fixed( x ) * Fixed( y ) );
@@ -47,6 +51,7 @@ int main( void ) {
 	std::cout<<"y = " << y <<" | ++y = " << ++y <<" | y = " << y <<"\n";
 	std::cout<<"x = " << x <<" | --x = " << --x <<" | x = " << x <<"\n";
 	std::cout<<"y = " << y <<" | --y = " << --y <<" | y = " << y <<"\n";
+<<<<<<< HEAD
 
 	std::cout<<"\nMax and mim\n";
 	std::cout<< Fixed::max(a, f) <<" is the max value between "<< a <<" and "<< f <<"\n";
@@ -57,5 +62,7 @@ int main( void ) {
 	std::cout<< Fixed::max(c, d) <<" is the max value between "<< c <<" and "<< d <<"\n";
 	std::cout<< Fixed::max(d, e) <<" is the max value between "<< d <<" and "<< e <<"\n";
 	std::cout<< Fixed::min(d, e) <<" is the min value between "<< d <<" and "<< e <<"\n";
+=======
+>>>>>>> refs/remotes/origin/master
 	return 0;
 }
