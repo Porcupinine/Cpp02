@@ -28,6 +28,6 @@ class Point {
 		Fixed getValue(char n);
 };
 
-bool bsp( Point const a, Point const b, Point const c, Point const point);
+bool bsp( const Point& a, const Point& b, const Point& c, const Point& point);
 
 #endif //CPP02_POINT_H

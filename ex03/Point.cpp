@@ -21,7 +21,7 @@ Point::Point(const Point &cp) : m_x(cp.m_x), m_y(cp.m_y){
 
 Fixed Point::getValue(char n) {
 	if(n == 'x')
-		return m_x;
+		return m_x.toFloat();
 	if(n == 'y')
-		return m_y;
+		return m_y.toFloat();
 }
