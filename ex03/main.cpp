@@ -49,8 +49,6 @@ int main( ) {
 		std::cout << bsp(p1, p2, p3, p6) << "\n";
 		std::cout << "P1, P2 and P3, P7 should be false: ";
 		std::cout << bsp(p1, p2, p3, p7) << "\n";
-
 	}
-
 	return 0;
 }
