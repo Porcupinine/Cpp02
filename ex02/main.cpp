@@ -39,14 +39,30 @@ int main( void ) {
 	std::cout<< x << " != " << y << " = " << (x != y) <<"\n";
 
 	std::cout<<"\nIncrement and decrement operators\n";
-	std::cout<<"x = " << x <<" | x++ = " << x++ <<" | x = " << x <<"\n";
-	std::cout<<"y = " << y <<" | y++ = " << y++ <<" | y = " << y <<"\n";
-	std::cout<<"x = " << x <<" | x-- = " << x-- <<" | x = " << x <<"\n";
-	std::cout<<"y = " << y <<" | y-- = " << y-- <<" | y = " << y <<"\n";
-	std::cout<<"x = " << x <<" | ++x = " << ++x <<" | x = " << x <<"\n";
-	std::cout<<"y = " << y <<" | ++y = " << ++y <<" | y = " << y <<"\n";
-	std::cout<<"x = " << x <<" | --x = " << --x <<" | x = " << x <<"\n";
-	std::cout<<"y = " << y <<" | --y = " << --y <<" | y = " << y <<"\n";
+	std::cout<<"x = " << x  <<" | x++ = ";
+	std::cout<< x++;
+	std::cout <<" | x = " << x <<"\n";
+	std::cout<<"y = " << y <<" | y++ = ";
+	std::cout<< y++;
+	std::cout<<" | y = " << y <<"\n";
+	std::cout<<"x = " << x <<" | x-- = ";
+	std::cout<< x--;
+	std::cout<<" | x = " << x <<"\n";
+	std::cout<<"y = " << y <<" | y-- = ";
+	std::cout<< y--;
+	std::cout<<" | y = " << y <<"\n";
+	std::cout<<"x = " << x <<" | ++x = ";
+	std::cout<< ++x;
+	std::cout<<" | x = " << x <<"\n";
+	std::cout<<"y = " << y <<" | ++y = ";
+	std::cout<< ++y;
+	std::cout<<" | y = " << y <<"\n";
+	std::cout<<"x = " << x <<" | --x = ";
+	std::cout<< --x;
+	std::cout<<" | x = " << x <<"\n";
+	std::cout<<"y = " << y <<" | --y = ";
+	std::cout<< --y;
+	std::cout<<" | y = " << y <<"\n";
 
 	std::cout<<"\nMax and mim\n";
 	std::cout<< Fixed::max(a, f) <<" is the max value between "<< a <<" and "<< f <<"\n";
